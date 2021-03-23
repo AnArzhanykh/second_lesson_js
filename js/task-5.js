@@ -3,16 +3,17 @@ const checkForSpam = function(message) {
     const arrOfmessage = lowerCaseMessage.split(' ');
     let modernArr =[]
 
-    for(let mess of arrOfmessage){
-        if(!mess.indexOf('[')){
-            mess = mess.slice(1, -1)
-            modernArr.push(mess)
-        }
-        modernArr.push(mess)
-    }
+    // for(let mess of arrOfmessage){
+    //     if(!mess.indexOf('[')){
+    //         mess = mess.slice(1, -1)
+    //         modernArr.push(mess)
+    //     }
+    //     modernArr.push(mess)
+    // }
     
-    console.log(message);
-    return modernArr.includes('spam') || modernArr.includes('sale');
+    // console.log(message);
+    // return modernArr.includes('spam') || modernArr.includes('sale');
+    return lowerCaseMessage.includes('spam') ||lowerCaseMessage.includes('sale');
 // твой код
 };
 
